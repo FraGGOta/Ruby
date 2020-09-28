@@ -2,7 +2,6 @@ require './lib/converter'
 
 RSpec.describe Converter do
   describe '#Converts' do
-
     it 'Convert from C to F' do
       expect(Converter.new.convert(35, 'C', 'F')).to eq 95
     end
@@ -12,11 +11,11 @@ RSpec.describe Converter do
     end
 
     it 'Convert from K to C' do
-      expect(Converter.new.convert(35, 'K', 'C').round(2)).to eq -238.15
+      expect(Converter.new.convert(35, 'K', 'C').round(2)).to eq(-238.15)
     end
 
     it 'Convert from K to F' do
-      expect(Converter.new.convert(35, 'K', 'F')).to eq -396.67
+      expect(Converter.new.convert(35, 'K', 'F')).to eq(-396.67)
     end
 
     it 'Convert from F to C' do
