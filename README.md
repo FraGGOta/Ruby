@@ -1,13 +1,16 @@
-# Ruby Starter Project
-
-![Unit Tests & Lint](https://github.com/max-konin/ruby-starter-project/workflows/Unit%20Tests%20&%20Lint/badge.svg)
-
+# Ruby
 
 ## Install
 
 ```bash
 gem install bundler
 bundle install
+```
+
+## Run program
+
+```bash
+ruby ./lib/main.rb
 ```
 
 ## Run test
