@@ -4,9 +4,9 @@ load 'lib/converter.rb'
 class Main
   def main
     input = Input.new
-    value = input.get_value
-    scale = input.get_scale
-    new_scale = input.get_scale
+    value = input.read_value
+    scale = input.read_scale
+    new_scale = input.read_scale
 
     conv = Converter.new
     result = conv.convert(value, scale, new_scale)
