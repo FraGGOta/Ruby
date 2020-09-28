@@ -1,3 +1,7 @@
+
+![Unit Tests & Lint](https://github.com/FraGGOta/Ruby/workflows/Unit%20Tests%20&%20Lint/badge.svg)
+
+
 # Ruby
 
 ## Install
