@@ -12,9 +12,13 @@ bundle install
 ## Run program
 
 ```bash
-ruby ./lib/main.rb
+[С F K] Converter
+ruby ./Lab1/lib/main.rb
+StatsAnalyzer
+ruby ./Lab2/lib/main.rb
 ```
 
+## Tests and rubocop are run from Lab1 and Lab2 folders respectively
 ## Run test
 
 ```bash

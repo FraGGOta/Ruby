@@ -1,5 +1,5 @@
-load 'lib/input.rb'
-load 'lib/converter.rb'
+load 'Lab1/lib/input.rb'
+load 'Lab1/lib/converter.rb'
 
 class Main
   def main

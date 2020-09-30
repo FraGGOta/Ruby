@@ -1,9 +1,9 @@
-load 'calculate.rb'
-load 'input.rb'
+load 'Lab2/lib/calculate.rb'
+load 'Lab2/lib/input.rb'
 
 class Main
   def read_file
-    file = File.new('stat.csv')
+    file = File.new('Lab2/lib/stat.csv')
     file.readlines
   end
 
