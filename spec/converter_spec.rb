@@ -1,7 +1,7 @@
 require './lib/converter'
 
 RSpec.describe Converter do
-  describe '#Converts' do
+  describe '.Converts' do
     context 'Convert from C to F' do
       it { expect(Converter.new.convert(35, 'C', 'F')).to eq 95 }
     end
