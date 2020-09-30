@@ -1,6 +1,6 @@
 class Calculate
   def search_max(arr)
-   max = arr[0]
+    max = arr[0]
     (0..arr.length - 1).each do |i|
       max = arr[i] if max.split(',')[1].to_i < arr[i].split(',')[1].to_i
     end
