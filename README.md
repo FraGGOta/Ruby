@@ -12,10 +12,13 @@ bundle install
 ## Run program
 
 ```bash
-[С F K] Converter
-ruby ./Lab1/lib/main.rb
-StatsAnalyzer
-ruby ./Lab2/lib/main.rb
+Degree converter [C F K]
+Go to folder Lab1
+ruby ./lib/main.rb
+
+Working with files
+Go to folder Lab2
+ruby ./lib/main.rb
 ```
 
 ## Tests and rubocop are run from Lab1 and Lab2 folders respectively
