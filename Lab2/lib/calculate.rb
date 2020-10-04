@@ -26,11 +26,8 @@ class Calculate
   def dispersion(arr)
     n = arr.length.to_f
     coefficient = n / (n - 1.0)
-
     average = average(arr)
-
     result = 0.0
-
     (0..n - 1).each do |i|
       result += (arr[i][1].to_f - average)**2
     end
