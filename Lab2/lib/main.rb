@@ -1,14 +1,11 @@
-load 'Lab2/lib/calculate.rb'
-load 'Lab2/lib/input.rb'
+require_relative 'calculate'
+require_relative 'input'
+require_relative 'read_file'
 
 class Main
-  def read_file
-    file = File.new('Lab2/lib/stat.csv')
-    file.readlines
-  end
-
   def main
-    arr = read_file
+    jopa = MyFile.new
+    arr = jopa.read_file
     value = Input.new
     choice = value.input_choice
     input = Calculate.new
@@ -19,9 +16,9 @@ class Main
     when 'min'
       puts input.search_min(arr)
     when 'avg'
-      puts input.calculate_average(arr).round(2)
+      puts input.average(arr)
     when 'disp'
-      puts input.calculate_correct_sample_variance(arr).round(2)
+      puts input.dispersion(arr)
 
     end
   end

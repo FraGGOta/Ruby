@@ -1,40 +1,39 @@
 class Calculate
   def search_max(arr)
-    max = arr[0]
+    max = arr[0][1].to_f
     (0..arr.length - 1).each do |i|
-      max = arr[i] if max.split(',')[1].to_i < arr[i].split(',')[1].to_i
+      max = arr[i][1].to_f if arr[i][1].to_f > max
     end
     max
   end
 
   def search_min(arr)
-    min = arr[0]
+    min = arr[0][1].to_f
     (0..arr.length - 1).each do |i|
-      min = arr[i] if min.split(',')[1].to_i > arr[i].split(',')[1].to_i
+      min = arr[i][1].to_f if arr[i][1].to_f < min
     end
     min
   end
 
-  def calculate_average(arr)
-    sum = 0
+  def average(arr)
+    average = 0.0
     (0..arr.length - 1).each do |i|
-      sum += arr[i].split(',')[1].to_f
+      average += arr[i][1].to_f
     end
-    sum / arr.length
+    (average / arr.length).round(2)
   end
 
-  def calculate_correct_sample_variance(arr)
-    sample_mean = calculate_average(arr)
-    sum = average_sum_of_difference(arr, sample_mean)
-    average = sum / arr.length
-    (arr.length.to_f / (arr.length - 1.to_f)) * average
-  end
+  def dispersion(arr)
+    n = arr.length.to_f
+    coefficient = n / (n - 1.0)
 
-  def average_sum_of_difference(arr, sample_mean)
-    sum = 0
-    (0..arr.length - 1).each do |i|
-      sum += (arr[i].split(',')[1].to_f - sample_mean)**2
+    average = average(arr)
+
+    result = 0.0
+
+    (0..n - 1).each do |i|
+      result += (arr[i][1].to_f - average)**2
     end
-    sum.to_f
+    (result * coefficient).round(2)
   end
 end
