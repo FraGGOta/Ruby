@@ -9,21 +9,21 @@ RSpec.describe Calculate do
       a = MyFile.new
       arr = a.read_file
       input = Calculate.new(arr)
-      it { expect(input.search_min(1)).to eq 66.3 }
+      it { expect(input.search_min(1)).to eq 64.9 }
     end
 
     context 'average' do
       a = MyFile.new
       arr = a.read_file
       input = Calculate.new(arr)
-      it { expect(input.average(1)).to eq 78.95 }
+      it { expect(input.average(1)).to eq 4451.92 }
     end
 
     context 'dispersion' do
       a = MyFile.new
       arr = a.read_file
       input = Calculate.new(arr)
-      it { expect(input.dispersion(1, input.average(1))).to eq 228.88 }
+      it { expect(input.dispersion(1, input.average(1))).to eq 153_393_599.8 }
     end
   end
 end
